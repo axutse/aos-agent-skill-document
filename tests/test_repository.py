@@ -17,13 +17,13 @@ def test_manifest_and_marketplace_are_consistent() -> None:
     marketplace = json.loads((ROOT / ".agents" / "plugins" / "marketplace.json").read_text(encoding="utf-8"))
     project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
     assert manifest["name"] == "aos-agent-skill-document"
-    assert manifest["version"] == project["project"]["version"] == "0.1.3"
+    assert manifest["version"] == project["project"]["version"] == "0.1.4"
     assert manifest["skills"] == "./skills/"
     assert marketplace["name"] == "aos-agent-skills"
     assert marketplace["plugins"][0]["name"] == manifest["name"]
     assert marketplace["plugins"][0]["source"]["path"] == "./plugins/aos-agent-skill-document"
     changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
-    assert "## [0.1.3]" in changelog
+    assert "## [0.1.4]" in changelog
 
 
 def test_three_skills_have_metadata() -> None:
@@ -53,6 +53,7 @@ def test_release_pdf_is_git_ignored() -> None:
 
 def test_usage_docs_and_chapter_gallery_are_complete() -> None:
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    english_readme = (ROOT / "README.en.md").read_text(encoding="utf-8")
     example_readme = (ROOT / "examples" / "taizhou-white-paper" / "README.md").read_text(
         encoding="utf-8"
     )
@@ -62,6 +63,13 @@ def test_usage_docs_and_chapter_gallery_are_complete() -> None:
     assert getting_started.is_file()
     assert "docs/usage-cookbook.md" in readme
     assert "docs/getting-started.md" in readme
+    assert 'docs/assets/readme-hero.svg' in readme
+    assert 'docs/assets/readme-hero.en.svg' in english_readme
+    for hero in ("readme-hero.svg", "readme-hero.en.svg"):
+        hero_text = (ROOT / "docs" / "assets" / hero).read_text(encoding="utf-8")
+        assert "<title" in hero_text
+        assert "<desc" in hero_text
+        assert "-apple-system" in hero_text
     tutorial = getting_started.read_text(encoding="utf-8")
     assert "codex plugin marketplace add axutse/aos-agent-skill-document" in tutorial
     assert "codex plugin add aos-agent-skill-document@aos-agent-skills" in tutorial
@@ -120,14 +128,14 @@ def test_chinese_and_english_documentation_are_paired() -> None:
         assert english.is_file()
         chinese_text = chinese.read_text(encoding="utf-8")
         english_text = english.read_text(encoding="utf-8")
-        assert "[English]" in chinese_text
-        assert "[简体中文]" in english_text
+        assert "[English]" in chinese_text or ">English<" in chinese_text
+        assert "[简体中文]" in english_text or ">简体中文<" in english_text
 
     english_readme = (ROOT / "README.en.md").read_text(encoding="utf-8")
     english_example = (
         ROOT / "examples" / "taizhou-white-paper" / "README.en.md"
     ).read_text(encoding="utf-8")
-    assert "Current version: `0.1.3`" in english_readme
+    assert "Version 0.1.4" in english_readme
     assert "docs/getting-started.en.md" in english_readme
     assert "docs/usage-cookbook.en.md" in english_readme
     gallery_files = {
@@ -178,7 +186,7 @@ def test_skillhub_distribution_builds_from_canonical_sources() -> None:
         assert "assets/apple-editorial.json" in files
         skillhub_skill = (output / "SKILL.md").read_text(encoding="utf-8")
         assert "slug: aos-agent-skill-document" in skillhub_skill
-        assert "version: 0.1.3" in skillhub_skill
+        assert "version: 0.1.4" in skillhub_skill
         assert (output / "scripts" / "inspect_docx.py").read_bytes() == (
             PLUGIN / "skills" / "aos-author-word" / "scripts" / "inspect_docx.py"
         ).read_bytes()

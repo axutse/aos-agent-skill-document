@@ -1,6 +1,6 @@
 [project]
 name = "aos-agent-skill-document"
-version = "0.1.3"
+version = "0.1.4"
 description = "Codex skills for Chinese, English, and bilingual Word/PDF publishing with local rendering, visual QA, and a TAIZHOU open-source case."
 readme = "README.md"
 requires-python = ">=3.10"

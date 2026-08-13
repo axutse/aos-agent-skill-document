@@ -4,6 +4,22 @@
 
 This project follows [Semantic Versioning](https://semver.org/).
 
+## [0.1.4] - 2026-08-13
+
+Apple-style GitHub presentation release.
+
+### Added
+
+- Chinese and English hero artwork with stable contrast across GitHub themes and accessible title/description text.
+- Bento capability overview, compact navigation, and progressively disclosed use cases on both GitHub home pages.
+- Tests for README hero presence, system-font use, and release-version consistency.
+
+### Changed
+
+- Reorganized both READMEs into a positioning → result → capability → choice → start → examples reading path.
+- Preserved the six-image case gallery while improving headings, captions, and action-link readability.
+- Aligned the Codex Plugin, Python project, SkillHub package, and GitHub Release on `0.1.4`.
+
 ## [0.1.3] - 2026-08-13
 
 Feature scope and multi-channel distribution release.
@@ -70,3 +86,4 @@ Initial public release.
 [0.1.1]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.1
 [0.1.2]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.2
 [0.1.3]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.3
+[0.1.4]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.4

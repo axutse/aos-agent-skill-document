@@ -1,7 +1,7 @@
 ---
 slug: aos-agent-skill-document
 displayName: AOS Agent Skill · Document
-version: 0.1.3
+version: 0.1.4
 summary: 将资料制作或整理为经过全页渲染验收的专业 Word 与 PDF，支持中文、英文和中英双版本。
 description: 面向白皮书、报告、提案、手册和品牌文档的端到端出版工作流，覆盖内容规划、可编辑 DOCX、PDF 转换、元数据清理和逐页视觉验收。
 tags: [文档, Word, PDF, 白皮书, 报告, 双语, 视觉验收]

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+  <title id="title">AOS Agent Skill Document</title>
+  <desc id="desc">从源资料到可编辑 Word、固定版式 PDF 与逐页视觉验收的文档出版工作流。</desc>
+  <defs>
+    <linearGradient id="accent" x1="1160" y1="102" x2="1430" y2="414" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A63A43"/>
+      <stop offset="1" stop-color="#6B1720"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#1D1D1F" flood-opacity=".12"/>
+    </filter>
+    <style>
+      .canvas { fill: #F5F5F7; }
+      .label { fill: #6E6E73; }
+      .title { fill: #1D1D1F; }
+      .body { fill: #515154; }
+      .card { fill: #FFFFFF; stroke: #D2D2D7; }
+      .card-title { fill: #1D1D1F; }
+      .card-copy { fill: #6E6E73; }
+      .rule { stroke: #D2D2D7; }
+      .page { fill: #FFFFFF; }
+      .page-line { stroke: #D2D2D7; }
+      text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "PingFang SC", sans-serif; }
+    </style>
+  </defs>
+
+  <rect class="canvas" width="1600" height="760" rx="48"/>
+  <circle cx="1468" cy="96" r="230" fill="#7E2027" opacity=".08"/>
+
+  <g transform="translate(112 84)">
+    <path d="M36 0C12 0 0 12 0 36v16c0 24 12 36 36 36h16c24 0 36-12 36-36V36C88 12 76 0 52 0H36Z" fill="#7E2027"/>
+    <path d="M27 20h29l13 13v36H27z" fill="#FFFFFF" opacity=".96"/>
+    <path d="M56 20v15h13" fill="none" stroke="#7E2027" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M36 45h24M36 54h24M36 63h17" stroke="#7E2027" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <text class="label" x="224" y="120" font-size="25" font-weight="650" letter-spacing="3">AOS · AGENT PUBLISHING SYSTEM</text>
+  <text class="title" x="112" y="244" font-size="84" font-weight="720" letter-spacing="-3.5">文档，不止是生成。</text>
+  <text class="body" x="116" y="306" font-size="31" font-weight="450">从资料到 Word 与 PDF，再到每一页的可信验收。</text>
+
+  <g transform="translate(1120 104)" filter="url(#shadow)">
+    <rect x="92" y="0" width="280" height="350" rx="30" fill="#D2D2D7" opacity=".55" transform="rotate(8 232 175)"/>
+    <rect x="42" y="20" width="280" height="350" rx="30" fill="#E5E5EA" transform="rotate(-4 182 195)"/>
+    <rect width="280" height="350" rx="30" fill="url(#accent)"/>
+    <circle cx="40" cy="42" r="9" fill="#FFFFFF" opacity=".9"/>
+    <text x="30" y="96" fill="#FFFFFF" font-size="18" font-weight="650" letter-spacing="1.6">TAIZHOU</text>
+    <text x="30" y="150" fill="#FFFFFF" font-size="35" font-weight="700">Brand</text>
+    <text x="30" y="190" fill="#FFFFFF" font-size="35" font-weight="700">White Paper</text>
+    <line x1="30" y1="224" x2="250" y2="224" stroke="#FFFFFF" opacity=".38"/>
+    <text x="30" y="260" fill="#FFFFFF" opacity=".78" font-size="17">Editable DOCX</text>
+    <text x="30" y="290" fill="#FFFFFF" opacity=".78" font-size="17">Verified PDF</text>
+    <path d="M212 286h38v38h-38z" class="page" opacity=".94"/>
+    <path d="M221 299h20M221 307h20M221 315h13" class="page-line" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(112 432)">
+    <rect class="card" width="424" height="224" rx="30" stroke-width="1.5"/>
+    <text class="label" x="32" y="48" font-size="18" font-weight="700" letter-spacing="1.8">01 · PLAN</text>
+    <text class="card-title" x="32" y="100" font-size="30" font-weight="680">先理解，再动笔</text>
+    <text class="card-copy" x="32" y="142" font-size="20">资料、事实、章节与页面预算</text>
+    <line class="rule" x1="32" y1="178" x2="392" y2="178"/>
+    <text class="card-copy" x="32" y="204" font-size="17">Sources → Page blueprint</text>
+  </g>
+
+  <g transform="translate(552 432)">
+    <rect class="card" width="424" height="224" rx="30" stroke-width="1.5"/>
+    <text class="label" x="32" y="48" font-size="18" font-weight="700" letter-spacing="1.8">02 · PUBLISH</text>
+    <text class="card-title" x="32" y="100" font-size="30" font-weight="680">同时交付两种确定性</text>
+    <text class="card-copy" x="32" y="142" font-size="20">可编辑 DOCX + 固定版式 PDF</text>
+    <line class="rule" x1="32" y1="178" x2="392" y2="178"/>
+    <text class="card-copy" x="32" y="204" font-size="17">Editable + Presentable</text>
+  </g>
+
+  <g transform="translate(992 432)">
+    <rect class="card" width="496" height="224" rx="30" stroke-width="1.5"/>
+    <text class="label" x="32" y="48" font-size="18" font-weight="700" letter-spacing="1.8">03 · VERIFY</text>
+    <text class="card-title" x="32" y="100" font-size="30" font-weight="680">让每一页都经得起查看</text>
+    <text class="card-copy" x="32" y="142" font-size="20">渲染、逐页检查、修复、重新验收</text>
+    <line class="rule" x1="32" y1="178" x2="464" y2="178"/>
+    <text class="card-copy" x="32" y="204" font-size="17">Render → Inspect → Revise</text>
+  </g>
+</svg>
