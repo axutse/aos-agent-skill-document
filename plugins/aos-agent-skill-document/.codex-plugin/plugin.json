@@ -1,7 +1,7 @@
 {
   "name": "aos-agent-skill-document",
-  "version": "0.1.0",
-  "description": "Create, edit, inspect, render, and visually verify professional Word and PDF documents.",
+  "version": "0.1.1",
+  "description": "Turn source materials into professional Word and PDF deliverables through local rendering and page-by-page visual QA.",
   "author": {
     "name": "宇道弦恒"
   },
@@ -17,8 +17,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "AOS Agent Skill · Document",
-    "shortDescription": "Professional Word and PDF authoring with visual QA",
-    "longDescription": "A skills-only document studio with separate workflows for publication planning, editable Word authoring, PDF processing, metadata review, rendering, and page-by-page visual verification. The source repository includes a reproducible TAIZHOU brand-enterprise white-paper case.",
+    "shortDescription": "End-to-end Word and PDF publishing with visual QA",
+    "longDescription": "A skills-only document publishing workflow for turning source materials into editable Word and fixed-layout PDF deliverables. It covers publication planning, DOCX authoring, PDF processing, metadata review, local rendering, and page-by-page visual verification. It is not an online Office suite or external conversion service and does not require an API key. The source repository includes a reproducible TAIZHOU brand-enterprise white-paper case.",
     "developerName": "宇道弦恒",
     "category": "Productivity",
     "capabilities": [
@@ -27,9 +27,9 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Create an editable Word report and verify every rendered page.",
-      "Inspect this PDF for metadata, layout, and rendering defects.",
-      "Use the TAIZHOU case to build a polished brand white paper."
+      "Turn these source materials into an editable Word report and verified PDF.",
+      "Audit this PDF for metadata, page geometry, and rendered layout defects before modifying it.",
+      "Use the TAIZHOU case as a reference to build and visually verify a brand white paper."
     ],
     "brandColor": "#7E2027",
     "composerIcon": "./assets/icon.svg",

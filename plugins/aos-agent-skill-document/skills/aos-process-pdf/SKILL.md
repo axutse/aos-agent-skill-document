@@ -1,11 +1,13 @@
 ---
 name: aos-process-pdf
-description: Create, inspect, render, compare, and visually verify professional PDF files. Use when Codex needs fixed-layout reports, print-ready exports, PDF metadata and page-geometry inspection, page rendering, contact sheets, PDF QA, or validation of PDF output converted from Word.
+description: Create, inspect, render, compare, clean, and visually verify professional PDF files while preserving fixed-layout fidelity. Use when Codex needs print-ready exports, PDF metadata and page-geometry inspection, page rendering, contact sheets, structural checks, public-release QA, or validation of PDF output converted from Word. Prefer this skill when PDF is the primary artifact or when the user requests an audit before any modification.
 ---
 
 # AOS PDF Processing
 
 Preserve vector content and verify both document structure and rendered appearance. Read [references/pdf-workflow.md](references/pdf-workflow.md) before complex PDF work.
+
+Treat fixed-layout integrity and full-page inspection as the primary contract. Do not infer visual correctness from extracted text, and do not modify an audit-only input until the user approves the reported repair scope.
 
 ## Workflow
 
