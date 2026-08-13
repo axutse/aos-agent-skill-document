@@ -4,6 +4,22 @@
 
 This project follows [Semantic Versioning](https://semver.org/).
 
+## [0.1.3] - 2026-08-13
+
+Feature scope and multi-channel distribution release.
+
+### Added
+
+- Checked implemented-capabilities list in both READMEs.
+- Detailed Chinese and English scope matrices separating implemented, conditional, and out-of-scope features.
+- Reproducible standalone SkillHub package and build script.
+- Chinese and English SkillHub publishing, dry-run, and version-synchronization guides.
+- SkillHub official CLI dry-run and distribution-consistency tests.
+
+### Changed
+
+- Codex Plugin, Python project, SkillHub package, and GitHub Release now share version `0.1.3`.
+
 ## [0.1.2] - 2026-08-13
 
 Chinese-English documentation release.
@@ -53,3 +69,4 @@ Initial public release.
 [0.1.0]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.0
 [0.1.1]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.1
 [0.1.2]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.2
+[0.1.3]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.3

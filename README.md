@@ -2,7 +2,7 @@
 
 [简体中文](README.md) | [English](README.en.md)
 
-当前版本：`0.1.2`
+当前版本：`0.1.3`
 
 [![Release](https://img.shields.io/github/v/release/axutse/aos-agent-skill-document)](https://github.com/axutse/aos-agent-skill-document/releases)
 [![CI](https://github.com/axutse/aos-agent-skill-document/actions/workflows/validate.yml/badge.svg)](https://github.com/axutse/aos-agent-skill-document/actions/workflows/validate.yml)
@@ -34,6 +34,25 @@ plan -> author -> render -> inspect -> revise -> verify
 
 默认交付契约是：**源资料检查 + 内容/页面计划 + 可编辑 DOCX + 固定版式 PDF + 全页视觉验收 + 公开发布检查**。用户只需要其中一部分时，技能会按要求缩小范围。
 
+## 已实现功能
+
+| 范围 | 功能 | 状态 |
+|---|---|:---:|
+| 内容规划 | 读取多份资料、建立事实清单、章节结构与页面预算 | ✅ |
+| Word | 新建 DOCX，局部修改现有 Word，保留样式与可编辑结构 | ✅ |
+| Word | 标题、目录、表格、图片、分节、页眉页脚与页码 | ✅ |
+| PDF | 页数、尺寸、旋转、加密、链接、表单与元数据检查 | ✅ |
+| 视觉验收 | DOCX/PDF 全页渲染、逐页检查、修复后重新验收 | ✅ |
+| 公开发布 | 清理作者、评论、修订记录和个人元数据 | ✅ |
+| 双语交付 | 中文、英文、两套独立中英文版本及术语对齐 | ✅ |
+| 批量交付 | 先生成一个样本，确认后按统一规则批量制作 | ✅ |
+| 开源案例 | 20 页可编辑示例、149 页完整案例、生成器和 QA 图片 | ✅ |
+| 本地处理 | 不需要额外 API Key，不上传到外部转换服务 | ✅ |
+
+完整的功能条件、依赖项与暂不支持范围见 [功能范围清单](docs/feature-matrix.md)。
+
+本项目同时提供 Codex Plugin 与 SkillHub 单 Skill 发行包，构建和版本同步方法见 [SkillHub 发布说明](docs/skillhub-publishing.md)。
+
 ## 先看成果
 
 TAIZHOU 公开案例包含 20 页可编辑 DOCX、对应 PDF、完整联系表和可重复运行的生成器。下面严格展示 6 张局部放大图：封面、目录，以及企业架构、品牌组合、商品开发和用户旅程四张高信息量图表页。
@@ -53,7 +72,7 @@ TAIZHOU 公开案例包含 20 页可编辑 DOCX、对应 PDF、完整联系表�
   </tr>
 </table>
 
-更多高清页面、章节说明与复刻方法见 [TAIZHOU 案例说明](examples/taizhou-white-paper/README.md)。完整 149 页案例可从 [v0.1.2 Release](https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.2) 下载。
+更多高清页面、章节说明与复刻方法见 [TAIZHOU 案例说明](examples/taizhou-white-paper/README.md)。完整 149 页案例可从 [v0.1.3 Release](https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.3) 下载。
 
 ## 包含的技能
 
@@ -185,10 +204,14 @@ DOCX 渲染需要 LibreOffice，PDF 渲染需要 Poppler。构建流程会生成
 .
 ├── .agents/plugins/marketplace.json
 ├── docs/
+│   ├── feature-matrix.md / feature-matrix.en.md
 │   ├── getting-started.md
 │   ├── getting-started.en.md
+│   ├── skillhub-publishing.md / skillhub-publishing.en.md
 │   ├── usage-cookbook.md
 │   └── usage-cookbook.en.md
+├── distributions/skillhub/
+│   └── aos-agent-skill-document/SKILL.md
 ├── plugins/aos-agent-skill-document/
 │   ├── .codex-plugin/plugin.json
 │   ├── assets/

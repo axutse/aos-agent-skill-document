@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 import subprocess
 import sys
 import tomllib
@@ -16,13 +17,13 @@ def test_manifest_and_marketplace_are_consistent() -> None:
     marketplace = json.loads((ROOT / ".agents" / "plugins" / "marketplace.json").read_text(encoding="utf-8"))
     project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
     assert manifest["name"] == "aos-agent-skill-document"
-    assert manifest["version"] == project["project"]["version"] == "0.1.2"
+    assert manifest["version"] == project["project"]["version"] == "0.1.3"
     assert manifest["skills"] == "./skills/"
     assert marketplace["name"] == "aos-agent-skills"
     assert marketplace["plugins"][0]["name"] == manifest["name"]
     assert marketplace["plugins"][0]["source"]["path"] == "./plugins/aos-agent-skill-document"
     changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
-    assert "## [0.1.2]" in changelog
+    assert "## [0.1.3]" in changelog
 
 
 def test_three_skills_have_metadata() -> None:
@@ -104,6 +105,11 @@ def test_chinese_and_english_documentation_are_paired() -> None:
         (ROOT / "CHANGELOG.md", ROOT / "CHANGELOG.en.md"),
         (ROOT / "docs" / "getting-started.md", ROOT / "docs" / "getting-started.en.md"),
         (ROOT / "docs" / "usage-cookbook.md", ROOT / "docs" / "usage-cookbook.en.md"),
+        (ROOT / "docs" / "feature-matrix.md", ROOT / "docs" / "feature-matrix.en.md"),
+        (
+            ROOT / "docs" / "skillhub-publishing.md",
+            ROOT / "docs" / "skillhub-publishing.en.md",
+        ),
         (
             ROOT / "examples" / "taizhou-white-paper" / "README.md",
             ROOT / "examples" / "taizhou-white-paper" / "README.en.md",
@@ -121,7 +127,7 @@ def test_chinese_and_english_documentation_are_paired() -> None:
     english_example = (
         ROOT / "examples" / "taizhou-white-paper" / "README.en.md"
     ).read_text(encoding="utf-8")
-    assert "Current version: `0.1.2`" in english_readme
+    assert "Current version: `0.1.3`" in english_readme
     assert "docs/getting-started.en.md" in english_readme
     assert "docs/usage-cookbook.en.md" in english_readme
     gallery_files = {
@@ -147,3 +153,34 @@ def test_chinese_and_english_documentation_are_paired() -> None:
     assert "references/bilingual-delivery.md" in (
         PLUGIN / "skills" / "aos-publish-document" / "SKILL.md"
     ).read_text(encoding="utf-8")
+
+
+def test_skillhub_distribution_builds_from_canonical_sources() -> None:
+    output = ROOT / "dist" / "skillhub-test" / "aos-agent-skill-document"
+    if output.exists():
+        shutil.rmtree(output)
+    subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "scripts" / "build_skillhub_package.py"),
+            "--output",
+            str(output),
+        ],
+        check=True,
+    )
+    try:
+        files = {path.relative_to(output).as_posix() for path in output.rglob("*") if path.is_file()}
+        assert len(files) == 18
+        assert "SKILL.md" in files
+        assert "scripts/inspect_docx.py" in files
+        assert "scripts/inspect_pdf.py" in files
+        assert "references/bilingual-delivery.md" in files
+        assert "assets/apple-editorial.json" in files
+        skillhub_skill = (output / "SKILL.md").read_text(encoding="utf-8")
+        assert "slug: aos-agent-skill-document" in skillhub_skill
+        assert "version: 0.1.3" in skillhub_skill
+        assert (output / "scripts" / "inspect_docx.py").read_bytes() == (
+            PLUGIN / "skills" / "aos-author-word" / "scripts" / "inspect_docx.py"
+        ).read_bytes()
+    finally:
+        shutil.rmtree(output)
