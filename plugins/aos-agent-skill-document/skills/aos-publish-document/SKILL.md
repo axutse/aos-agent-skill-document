@@ -1,17 +1,24 @@
 ---
 name: aos-publish-document
-description: Coordinate professional document publishing across editable Word and fixed PDF deliverables. Use when Codex needs to plan, create, revise, convert, or visually QA reports, white papers, proposals, manuals, brand books, and other publication-ready business documents that may require both DOCX and PDF outputs.
+description: Coordinate end-to-end professional document publishing across editable Word and fixed PDF deliverables. Use when Codex needs to turn source materials into publication-ready reports, white papers, proposals, manuals, brand books, or other business documents through content planning, DOCX authoring, PDF conversion, metadata review, and page-by-page visual QA. Prefer this orchestration skill when the request spans both content structure and final deliverables, especially when both DOCX and PDF are required.
 ---
 
 # AOS Document Publishing
 
 Produce polished documents through a deterministic `plan -> author -> render -> inspect -> revise -> verify` loop.
 
+## Position the work
+
+Act as a document publishing orchestrator, not as a replacement for Word, Acrobat, factual review, legal review, or rights clearance. Combine Codex reasoning with local document tools, preserve editability where required, and treat rendered-page verification as part of the deliverable rather than an optional preview.
+
+Read [references/positioning-and-routing.md](references/positioning-and-routing.md) when selecting among the three AOS skills, explaining scope to the user, or defining the input and output contract.
+
 ## Route the work
 
 - Use `$aos-author-word` when editability, semantic styles, tracked document structure, or DOCX delivery matters.
 - Use `$aos-process-pdf` for fixed-layout creation, PDF inspection, metadata checks, rendering, page operations, or print-ready verification.
 - Use both when the user requests DOCX and PDF: author the DOCX first, verify it, export the PDF, and verify the PDF again.
+- Do not invoke all three skills mechanically. Use this skill as the orchestration entry point and load the format-specific workflow only when the task requires it.
 
 ## Required workflow
 

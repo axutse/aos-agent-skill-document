@@ -1,11 +1,13 @@
 ---
 name: aos-author-word
-description: Create, edit, inspect, convert, and visually verify professional Microsoft Word DOCX files. Use when Codex needs editable reports, white papers, proposals, manuals, policies, brand books, tables, images, sections, headers, footers, high-fidelity image settings, DOCX-to-PDF conversion, or final page-by-page Word rendering QA.
+description: Create, edit, inspect, convert, and visually verify professional Microsoft Word DOCX files while preserving editable structure. Use when Codex needs to author or locally revise reports, white papers, proposals, manuals, policies, brand books, tables, images, sections, headers, footers, high-fidelity image settings, DOCX-to-PDF conversion, metadata cleanup, or final page-by-page Word rendering QA. Prefer this skill when DOCX is the primary artifact and full publication orchestration is unnecessary.
 ---
 
 # AOS Word Authoring
 
 Use semantic Word structure and complete visual verification. Read [references/docx-workflow.md](references/docx-workflow.md) before complex authoring or section work.
+
+Treat DOCX editability and preservation of existing structure as the primary contract. Do not rebuild an entire document when the user requests localized edits, and do not claim complete visual QA when LibreOffice rendering is unavailable.
 
 ## Workflow
 
