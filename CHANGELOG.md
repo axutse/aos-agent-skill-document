@@ -2,6 +2,24 @@
 
 本项目遵循 [Semantic Versioning](https://semver.org/)。
 
+[简体中文](CHANGELOG.md) | [English](CHANGELOG.en.md)
+
+## [0.1.2] - 2026-08-13
+
+中英文双语版本。
+
+### Added
+
+- 英文项目首页、完整入门教程、使用案例与提示词手册。
+- 英文 TAIZHOU 案例说明和六张代表页面解读。
+- 中英文双语文档交付规则，包括术语表、版式选择和独立视觉验收。
+- 双语文档导航与内容一致性测试。
+
+### Changed
+
+- 插件元数据明确支持中文、英文及中英双语文档交付。
+- 入门教程新增中英文双版本交付示例。
+
 ## [0.1.1] - 2026-08-13
 
 教程与定位版本。
@@ -34,3 +52,4 @@
 
 [0.1.0]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.0
 [0.1.1]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.1
+[0.1.2]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.2

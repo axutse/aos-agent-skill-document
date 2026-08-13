@@ -1,6 +1,8 @@
 # AOS Agent Skill · Document
 
-当前版本：`0.1.1`
+[简体中文](README.md) | [English](README.en.md)
+
+当前版本：`0.1.2`
 
 [![Release](https://img.shields.io/github/v/release/axutse/aos-agent-skill-document)](https://github.com/axutse/aos-agent-skill-document/releases)
 [![CI](https://github.com/axutse/aos-agent-skill-document/actions/workflows/validate.yml/badge.svg)](https://github.com/axutse/aos-agent-skill-document/actions/workflows/validate.yml)
@@ -51,7 +53,7 @@ TAIZHOU 公开案例包含 20 页可编辑 DOCX、对应 PDF、完整联系表�
   </tr>
 </table>
 
-更多高清页面、章节说明与复刻方法见 [TAIZHOU 案例说明](examples/taizhou-white-paper/README.md)。完整 149 页案例可从 [v0.1.1 Release](https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.1) 下载。
+更多高清页面、章节说明与复刻方法见 [TAIZHOU 案例说明](examples/taizhou-white-paper/README.md)。完整 149 页案例可从 [v0.1.2 Release](https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.2) 下载。
 
 ## 包含的技能
 
@@ -184,7 +186,9 @@ DOCX 渲染需要 LibreOffice，PDF 渲染需要 Poppler。构建流程会生成
 ├── .agents/plugins/marketplace.json
 ├── docs/
 │   ├── getting-started.md
-│   └── usage-cookbook.md
+│   ├── getting-started.en.md
+│   ├── usage-cookbook.md
+│   └── usage-cookbook.en.md
 ├── plugins/aos-agent-skill-document/
 │   ├── .codex-plugin/plugin.json
 │   ├── assets/

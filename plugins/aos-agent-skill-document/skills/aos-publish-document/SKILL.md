@@ -7,6 +7,8 @@ description: Coordinate end-to-end professional document publishing across edita
 
 Produce polished documents through a deterministic `plan -> author -> render -> inspect -> revise -> verify` loop.
 
+Match the user's requested language. When the user requests Chinese and English editions, read [references/bilingual-delivery.md](references/bilingual-delivery.md) and verify each language artifact independently.
+
 ## Position the work
 
 Act as a document publishing orchestrator, not as a replacement for Word, Acrobat, factual review, legal review, or rights clearance. Combine Codex reasoning with local document tools, preserve editability where required, and treat rendered-page verification as part of the deliverable rather than an optional preview.

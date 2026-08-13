@@ -1,7 +1,7 @@
 [project]
 name = "aos-agent-skill-document"
-version = "0.1.1"
-description = "Codex skills for end-to-end Word and PDF publishing with local rendering, visual QA, and a TAIZHOU open-source case."
+version = "0.1.2"
+description = "Codex skills for Chinese, English, and bilingual Word/PDF publishing with local rendering, visual QA, and a TAIZHOU open-source case."
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
