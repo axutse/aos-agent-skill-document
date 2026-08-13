@@ -1,0 +1,4 @@
+interface:
+  display_name: "AOS Word Authoring"
+  short_description: "Create, edit, render, and verify professional Word files"
+  default_prompt: "Use $aos-author-word to create or revise an editable Word document and verify its rendering."

@@ -1,0 +1,39 @@
+{
+  "name": "aos-agent-skill-document",
+  "version": "0.1.0",
+  "description": "Create, edit, inspect, render, and visually verify professional Word and PDF documents.",
+  "author": {
+    "name": "宇道弦恒"
+  },
+  "license": "MIT",
+  "keywords": [
+    "document",
+    "docx",
+    "pdf",
+    "publishing",
+    "visual-qa",
+    "TAIZHOU"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AOS Agent Skill · Document",
+    "shortDescription": "Professional Word and PDF authoring with visual QA",
+    "longDescription": "A skills-only document studio with separate workflows for publication planning, editable Word authoring, PDF processing, metadata review, rendering, and page-by-page visual verification. The source repository includes a reproducible TAIZHOU brand-enterprise white-paper case.",
+    "developerName": "宇道弦恒",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Create an editable Word report and verify every rendered page.",
+      "Inspect this PDF for metadata, layout, and rendering defects.",
+      "Use the TAIZHOU case to build a polished brand white paper."
+    ],
+    "brandColor": "#7E2027",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

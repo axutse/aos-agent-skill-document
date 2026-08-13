@@ -1,0 +1,27 @@
+[project]
+name = "aos-agent-skill-document"
+version = "0.1.0"
+description = "Codex skills for professional Word and PDF publishing with a TAIZHOU open-source case."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "宇道弦恒"}]
+dependencies = [
+  "python-docx>=1.2.0,<2",
+  "Pillow>=11,<13",
+  "pypdf>=6,<7",
+  "lxml>=5,<7",
+  "reportlab>=4,<5"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.urls]
+Homepage = "https://github.com/axutse/aos-agent-skill-document"
+Repository = "https://github.com/axutse/aos-agent-skill-document"
+Issues = "https://github.com/axutse/aos-agent-skill-document/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

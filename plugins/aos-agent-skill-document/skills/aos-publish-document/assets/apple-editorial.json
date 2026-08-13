@@ -1,0 +1,35 @@
+{
+  "name": "apple-editorial",
+  "page": {
+    "size": "A4",
+    "portrait_margins_mm": [20, 20, 18, 20],
+    "landscape_margins_mm": [18, 18, 16, 18]
+  },
+  "colors": {
+    "background": "#FFFFFF",
+    "warm_background": "#F6F3EF",
+    "title": "#1D1D1F",
+    "body": "#424245",
+    "muted": "#86868B",
+    "rule": "#E5E5E5",
+    "accent": "#7E2027"
+  },
+  "typography_pt": {
+    "cover": 44,
+    "section_number": 88,
+    "section_title": 34,
+    "thesis": 38,
+    "page_title": 24,
+    "subheading": 15,
+    "body": 11,
+    "caption": 8.5
+  },
+  "principles": [
+    "one-dominant-idea-per-page",
+    "conclusion-first-headlines",
+    "large-content-with-whitespace",
+    "minimal-borders",
+    "native-tables-for-data",
+    "visual-qa-required"
+  ]
+}

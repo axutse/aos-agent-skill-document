@@ -1,0 +1,45 @@
+{
+  "name": "taizhou-brand-white-paper",
+  "description": "Apple-inspired editorial system for the TAIZHOU public example white paper.",
+  "page": {
+    "size": "A4",
+    "portrait_margins_mm": [20, 18, 20, 18],
+    "landscape_margins_mm": [18, 15, 18, 15],
+    "grid_columns": 12,
+    "spacing_unit_pt": 8
+  },
+  "colors": {
+    "white": "#FFFFFF",
+    "warm_white": "#F6F3EF",
+    "title_black": "#1D1D1F",
+    "body_gray": "#424245",
+    "secondary_gray": "#86868B",
+    "divider_gray": "#E5E5E5",
+    "taizhou_red": "#7E2027",
+    "deep_red": "#5B171C",
+    "wanmian_oat": "#C6B39B",
+    "geerna_black": "#2A2927",
+    "uiup_blue_gray": "#6D7885"
+  },
+  "type_scale_pt": {
+    "cover_title": 44,
+    "chapter_number": 88,
+    "chapter_title": 34,
+    "thesis": 38,
+    "page_title": 24,
+    "secondary": 16,
+    "body": 11,
+    "caption": 8.5,
+    "metric": 52
+  },
+  "rules": {
+    "dominant_ideas_per_page": 1,
+    "maximum_highlight_colors_per_page": 1,
+    "minimum_diagram_content_width_percent": 82,
+    "maximum_radial_diagrams_in_long_document": 6,
+    "preferred_image_dpi": 330,
+    "native_tables": true,
+    "conclusion_first_titles": true,
+    "brand_image_separation": true
+  }
+}

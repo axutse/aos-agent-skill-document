@@ -1,0 +1,19 @@
+{
+  "document_title": "TAIZHOU品牌企业白皮书",
+  "english_title": "TAIZHOU BRAND ENTERPRISE WHITE PAPER",
+  "planning_horizon": "2026-2030",
+  "edition": "compact-public-example",
+  "target_pages": 20,
+  "deliverables": ["docx", "pdf"],
+  "language": "zh-CN",
+  "style_pack": "style-pack.json",
+  "brands": ["万棉尚品", "GEERNA", "UIUP"],
+  "data_policy": "Mark all built-in financial and operating values as PLANNING ASSUMPTION.",
+  "public_example": true,
+  "content_license": "CC BY 4.0",
+  "qa": {
+    "render_every_page": true,
+    "inspect_every_page": true,
+    "emit_contact_sheet": true
+  }
+}

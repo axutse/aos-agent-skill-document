@@ -1,0 +1,4 @@
+interface:
+  display_name: "AOS PDF Processing"
+  short_description: "Create, inspect, render, and verify professional PDF files"
+  default_prompt: "Use $aos-process-pdf to inspect or produce a PDF and verify every rendered page."

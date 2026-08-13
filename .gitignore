@@ -1,0 +1,19 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Regenerated QA intermediates
+examples/taizhou-white-paper/output/render/
+examples/taizhou-white-paper/output/taizhou_sample_assets/
+examples/taizhou-white-paper/output/*_高清.docx
+tmp/
+
+# The full 149-page case is prepared as a GitHub Release asset, not Git history.
+release-assets/*.pdf
+!release-assets/README.md

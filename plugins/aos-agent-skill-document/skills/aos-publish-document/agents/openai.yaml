@@ -1,0 +1,4 @@
+interface:
+  display_name: "AOS Document Publishing"
+  short_description: "Coordinate polished Word and PDF publishing workflows"
+  default_prompt: "Use $aos-publish-document to create a polished document and verify every final page."

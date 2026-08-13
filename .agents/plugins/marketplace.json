@@ -1,0 +1,20 @@
+{
+  "name": "aos-agent-skills",
+  "interface": {
+    "displayName": "AOS Agent Skills"
+  },
+  "plugins": [
+    {
+      "name": "aos-agent-skill-document",
+      "source": {
+        "source": "local",
+        "path": "./plugins/aos-agent-skill-document"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
