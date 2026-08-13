@@ -72,7 +72,8 @@ def test_usage_docs_and_chapter_gallery_are_complete() -> None:
         assert "-apple-system" in hero_text
     tutorial = getting_started.read_text(encoding="utf-8")
     assert "codex plugin marketplace add axutse/aos-agent-skill-document" in tutorial
-    assert "codex plugin add aos-agent-skill-document@aos-agent-skills" in tutorial
+    assert "`/plugins`" in tutorial
+    assert "codex plugin marketplace upgrade aos-agent-skills" in tutorial
     assert "$aos-publish-document" in tutorial
     assert "$aos-author-word" in tutorial
     assert "$aos-process-pdf" in tutorial
@@ -105,6 +106,18 @@ def test_usage_docs_and_chapter_gallery_are_complete() -> None:
     for filename in expected:
         assert f"examples/taizhou-white-paper/assets/chapter-gallery/{filename}" in readme
         assert f"assets/chapter-gallery/{filename}" in example_readme
+
+
+def test_social_preview_matches_github_recommendations() -> None:
+    preview = ROOT / "docs" / "assets" / "social-preview.png"
+    assert preview.is_file()
+    assert preview.stat().st_size < 1_000_000
+
+    from PIL import Image
+
+    with Image.open(preview) as image:
+        assert image.format == "PNG"
+        assert image.size == (1280, 640)
 
 
 def test_chinese_and_english_documentation_are_paired() -> None:
