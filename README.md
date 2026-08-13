@@ -12,7 +12,7 @@
     <a href="https://github.com/axutse/aos-agent-skill-document/actions/workflows/validate.yml"><img src="https://img.shields.io/github/actions/workflow/status/axutse/aos-agent-skill-document/validate.yml?style=flat-square&label=validation" alt="Validation"></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-1D1D1F?style=flat-square" alt="MIT License"></a>
   </p>
-  <p><sub>当前版本 0.1.4 · 本地处理 · 无需额外 API Key · 中文 / English</sub></p>
+  <p><sub>当前版本 0.1.5 · 本地处理 · 无需额外 API Key · 中文 / English</sub></p>
 </div>
 
 ---
@@ -64,7 +64,7 @@ TAIZHOU 开源案例包含 20 页可编辑 DOCX、对应 PDF、完整联系表�
   </tr>
 </table>
 
-[查看高清案例与复刻方法](examples/taizhou-white-paper/README.md) · [下载 149 页完整案例](https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.4)
+[查看高清案例与复刻方法](examples/taizhou-white-paper/README.md) · [下载 149 页完整案例](https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.5)
 
 ## 能力范围
 

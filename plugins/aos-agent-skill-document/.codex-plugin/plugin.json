@@ -1,6 +1,6 @@
 {
   "name": "aos-agent-skill-document",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Turn source materials into Chinese, English, or bilingual Word and PDF deliverables through local rendering and page-by-page visual QA.",
   "author": {
     "name": "宇道弦恒"

@@ -12,7 +12,7 @@
     <a href="https://github.com/axutse/aos-agent-skill-document/actions/workflows/validate.yml"><img src="https://img.shields.io/github/actions/workflow/status/axutse/aos-agent-skill-document/validate.yml?style=flat-square&label=validation" alt="Validation"></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-1D1D1F?style=flat-square" alt="MIT License"></a>
   </p>
-  <p><sub>Version 0.1.4 · Local processing · No extra API key · 中文 / English</sub></p>
+  <p><sub>Version 0.1.5 · Local processing · No extra API key · 中文 / English</sub></p>
 </div>
 
 ---
@@ -63,7 +63,7 @@ The open TAIZHOU case includes a 20-page editable DOCX, matching PDF, complete c
   </tr>
 </table>
 
-[Explore the high-resolution case and adaptation guide](examples/taizhou-white-paper/README.en.md) · [Download the complete 149-page case](https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.4)
+[Explore the high-resolution case and adaptation guide](examples/taizhou-white-paper/README.en.md) · [Download the complete 149-page case](https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.5)
 
 ## Capabilities
 

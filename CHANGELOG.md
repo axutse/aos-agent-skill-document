@@ -4,6 +4,21 @@
 
 [简体中文](CHANGELOG.md) | [English](CHANGELOG.en.md)
 
+## [0.1.5] - 2026-08-13
+
+SkillHub 展示同步版本。
+
+### Added
+
+- SkillHub 概述新增与 GitHub 对齐的定位、能力清单、3 分钟教程和五类使用案例。
+- SkillHub 概述新增 TAIZHOU 封面、目录和四张高信息量图表页，共六张高清案例图。
+- SkillHub ZIP 发行包新增中英文主视觉、社交预览图和完整六图案例图库。
+
+### Changed
+
+- SkillHub 页面与 GitHub README 使用相同的“定位 → 成果 → 能力 → 上手 → 案例”阅读路径。
+- Codex Plugin、Python 项目、SkillHub 发行包和 GitHub Release 统一使用 `0.1.5`。
+
 ## [0.1.4] - 2026-08-13
 
 GitHub Apple 风格展示版本。
@@ -87,3 +102,4 @@ GitHub Apple 风格展示版本。
 [0.1.2]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.2
 [0.1.3]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.3
 [0.1.4]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.4
+[0.1.5]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.5
