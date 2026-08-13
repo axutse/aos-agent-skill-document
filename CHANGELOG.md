@@ -4,6 +4,22 @@
 
 [简体中文](CHANGELOG.md) | [English](CHANGELOG.en.md)
 
+## [0.1.3] - 2026-08-13
+
+功能范围与多渠道发行版本。
+
+### Added
+
+- README 已实现功能打勾列表。
+- 中英文详细功能范围清单，区分已实现、有条件支持和当前不包含。
+- 可重复生成的 SkillHub 独立发行包与构建脚本。
+- 中英文 SkillHub 发布、预检和版本同步说明。
+- SkillHub 官方 CLI 本地预检和发行包一致性测试。
+
+### Changed
+
+- Codex Plugin、Python 项目、SkillHub 发行包和 GitHub Release 统一使用 `0.1.3`。
+
 ## [0.1.2] - 2026-08-13
 
 中英文双语版本。
@@ -53,3 +69,4 @@
 [0.1.0]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.0
 [0.1.1]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.1
 [0.1.2]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.2
+[0.1.3]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.3

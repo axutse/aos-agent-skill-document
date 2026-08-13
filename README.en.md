@@ -2,7 +2,7 @@
 
 [简体中文](README.md) | [English](README.en.md)
 
-Current version: `0.1.2`
+Current version: `0.1.3`
 
 [![Release](https://img.shields.io/github/v/release/axutse/aos-agent-skill-document)](https://github.com/axutse/aos-agent-skill-document/releases)
 [![CI](https://github.com/axutse/aos-agent-skill-document/actions/workflows/validate.yml/badge.svg)](https://github.com/axutse/aos-agent-skill-document/actions/workflows/validate.yml)
@@ -34,6 +34,25 @@ It does not:
 
 The default delivery contract is: **source review + content/page plan + editable DOCX + fixed-layout PDF + full-page visual QA + public-release checks**. The skills reduce that scope when the user requests only part of the workflow.
 
+## Implemented capabilities
+
+| Area | Capability | Status |
+|---|---|:---:|
+| Content planning | Read multiple sources and build a fact list, section structure, and page budget | ✅ |
+| Word | Create DOCX or revise an existing Word file while preserving styles and editability | ✅ |
+| Word | Headings, contents, tables, images, sections, headers, footers, and page numbers | ✅ |
+| PDF | Inspect page count, dimensions, rotation, encryption, links, forms, and metadata | ✅ |
+| Visual QA | Render every DOCX/PDF page, inspect individually, repair, and re-verify | ✅ |
+| Public release | Remove author data, comments, tracked changes, and personal metadata | ✅ |
+| Bilingual delivery | Chinese, English, and aligned separate Chinese-English editions | ✅ |
+| Batch delivery | Accept one sample, then generate a batch under locked rules | ✅ |
+| Open case | 20-page editable sample, 149-page full case, generator, and QA images | ✅ |
+| Local processing | No additional API key and no external conversion service | ✅ |
+
+See the [feature scope matrix](docs/feature-matrix.en.md) for conditions, dependencies, and out-of-scope capabilities.
+
+The project ships as both a Codex Plugin and a standalone SkillHub skill. See [SkillHub publishing](docs/skillhub-publishing.en.md) for package generation and version synchronization.
+
 ## See the result first
 
 The open TAIZHOU case includes a 20-page editable DOCX, matching PDF, complete contact sheet, and reproducible generator. The six enlarged crops below show the cover, contents, corporate architecture, brand portfolio, product development, and user journey pages.
@@ -53,7 +72,7 @@ The open TAIZHOU case includes a 20-page editable DOCX, matching PDF, complete c
   </tr>
 </table>
 
-See the [TAIZHOU case guide](examples/taizhou-white-paper/README.en.md) for high-resolution pages, chapter notes, and adaptation instructions. Download the complete 149-page case from the [v0.1.2 Release](https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.2).
+See the [TAIZHOU case guide](examples/taizhou-white-paper/README.en.md) for high-resolution pages, chapter notes, and adaptation instructions. Download the complete 149-page case from the [v0.1.3 Release](https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.3).
 
 ## Included skills
 
@@ -191,8 +210,12 @@ DOCX rendering requires LibreOffice; PDF rendering requires Poppler. The build g
 ├── .agents/plugins/marketplace.json
 ├── README.md / README.en.md
 ├── docs/
+│   ├── feature-matrix.md / feature-matrix.en.md
 │   ├── getting-started.md / getting-started.en.md
+│   ├── skillhub-publishing.md / skillhub-publishing.en.md
 │   └── usage-cookbook.md / usage-cookbook.en.md
+├── distributions/skillhub/
+│   └── aos-agent-skill-document/SKILL.md
 ├── plugins/aos-agent-skill-document/
 │   ├── .codex-plugin/plugin.json
 │   ├── assets/
