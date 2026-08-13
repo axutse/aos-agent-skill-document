@@ -17,13 +17,13 @@ def test_manifest_and_marketplace_are_consistent() -> None:
     marketplace = json.loads((ROOT / ".agents" / "plugins" / "marketplace.json").read_text(encoding="utf-8"))
     project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
     assert manifest["name"] == "aos-agent-skill-document"
-    assert manifest["version"] == project["project"]["version"] == "0.1.4"
+    assert manifest["version"] == project["project"]["version"] == "0.1.5"
     assert manifest["skills"] == "./skills/"
     assert marketplace["name"] == "aos-agent-skills"
     assert marketplace["plugins"][0]["name"] == manifest["name"]
     assert marketplace["plugins"][0]["source"]["path"] == "./plugins/aos-agent-skill-document"
     changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
-    assert "## [0.1.4]" in changelog
+    assert "## [0.1.5]" in changelog
 
 
 def test_three_skills_have_metadata() -> None:
@@ -148,7 +148,7 @@ def test_chinese_and_english_documentation_are_paired() -> None:
     english_example = (
         ROOT / "examples" / "taizhou-white-paper" / "README.en.md"
     ).read_text(encoding="utf-8")
-    assert "Version 0.1.4" in english_readme
+    assert "Version 0.1.5" in english_readme
     assert "docs/getting-started.en.md" in english_readme
     assert "docs/usage-cookbook.en.md" in english_readme
     gallery_files = {
@@ -191,7 +191,7 @@ def test_skillhub_distribution_builds_from_canonical_sources() -> None:
     )
     try:
         files = {path.relative_to(output).as_posix() for path in output.rglob("*") if path.is_file()}
-        assert len(files) == 18
+        assert len(files) == 27
         assert "SKILL.md" in files
         assert "scripts/inspect_docx.py" in files
         assert "scripts/inspect_pdf.py" in files
@@ -199,7 +199,24 @@ def test_skillhub_distribution_builds_from_canonical_sources() -> None:
         assert "assets/apple-editorial.json" in files
         skillhub_skill = (output / "SKILL.md").read_text(encoding="utf-8")
         assert "slug: aos-agent-skill-document" in skillhub_skill
-        assert "version: 0.1.4" in skillhub_skill
+        assert "version: 0.1.5" in skillhub_skill
+        gallery_files = {
+            "00-cover-page-01.png",
+            "01-contents-page-03.png",
+            "02-governance-page-04.png",
+            "03-multi-brand-page-07.png",
+            "04-product-material-page-12.png",
+            "05-media-operation-page-17.png",
+        }
+        for filename in gallery_files:
+            assert f"assets/chapter-gallery/{filename}" in files
+            assert (
+                f"examples/taizhou-white-paper/assets/chapter-gallery/{filename}"
+                in skillhub_skill
+            )
+        assert "assets/readme-hero.svg" in files
+        assert "assets/readme-hero.en.svg" in files
+        assert "assets/social-preview.png" in files
         assert (output / "scripts" / "inspect_docx.py").read_bytes() == (
             PLUGIN / "skills" / "aos-author-word" / "scripts" / "inspect_docx.py"
         ).read_bytes()

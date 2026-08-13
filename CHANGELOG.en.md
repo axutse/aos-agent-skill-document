@@ -4,6 +4,21 @@
 
 This project follows [Semantic Versioning](https://semver.org/).
 
+## [0.1.5] - 2026-08-13
+
+SkillHub presentation parity release.
+
+### Added
+
+- Added positioning, a capability checklist, a three-minute start guide, and five practical use cases to the SkillHub overview.
+- Added six high-resolution TAIZHOU case images covering the cover, contents, and four information-dense chart pages.
+- Added Chinese and English hero visuals, the social preview, and the complete six-image gallery to the SkillHub ZIP package.
+
+### Changed
+
+- Aligned the SkillHub page with the GitHub README reading path: positioning → results → capabilities → quick start → use cases.
+- Aligned the Codex Plugin, Python project, SkillHub package, and GitHub Release on `0.1.5`.
+
 ## [0.1.4] - 2026-08-13
 
 Apple-style GitHub presentation release.
@@ -87,3 +102,4 @@ Initial public release.
 [0.1.2]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.2
 [0.1.3]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.3
 [0.1.4]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.4
+[0.1.5]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.5

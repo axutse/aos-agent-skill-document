@@ -28,6 +28,13 @@ SCRIPT_SOURCES = (
 ASSET_FILES = (
     PLUGIN / "assets" / "icon.svg",
     PLUGIN / "skills" / "aos-publish-document" / "assets" / "apple-editorial.json",
+    ROOT / "docs" / "assets" / "readme-hero.svg",
+    ROOT / "docs" / "assets" / "readme-hero.en.svg",
+    ROOT / "docs" / "assets" / "social-preview.png",
+)
+
+GALLERY_SOURCE = (
+    ROOT / "examples" / "taizhou-white-paper" / "assets" / "chapter-gallery"
 )
 
 
@@ -72,6 +79,9 @@ def build(output: Path) -> Path:
     assets.mkdir()
     for source in ASSET_FILES:
         shutil.copy2(source, assets / source.name)
+
+    gallery = assets / "chapter-gallery"
+    shutil.copytree(GALLERY_SOURCE, gallery)
 
     file_count = sum(1 for path in output.rglob("*") if path.is_file())
     print(f"Built SkillHub package: {output}")
