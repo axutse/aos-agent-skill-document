@@ -1,4 +1,4 @@
 interface:
   display_name: "AOS Document Publishing"
-  short_description: "Plan, author, render, and verify Word and PDF files"
-  default_prompt: "Use $aos-publish-document to turn my source materials into editable Word and verified PDF deliverables."
+  short_description: "Publish and verify multilingual Word and PDF files"
+  default_prompt: "Use $aos-publish-document to turn my source materials into verified Word and PDF deliverables in my requested language."

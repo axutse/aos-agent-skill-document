@@ -16,13 +16,13 @@ def test_manifest_and_marketplace_are_consistent() -> None:
     marketplace = json.loads((ROOT / ".agents" / "plugins" / "marketplace.json").read_text(encoding="utf-8"))
     project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
     assert manifest["name"] == "aos-agent-skill-document"
-    assert manifest["version"] == project["project"]["version"] == "0.1.1"
+    assert manifest["version"] == project["project"]["version"] == "0.1.2"
     assert manifest["skills"] == "./skills/"
     assert marketplace["name"] == "aos-agent-skills"
     assert marketplace["plugins"][0]["name"] == manifest["name"]
     assert marketplace["plugins"][0]["source"]["path"] == "./plugins/aos-agent-skill-document"
     changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
-    assert "## [0.1.1]" in changelog
+    assert "## [0.1.2]" in changelog
 
 
 def test_three_skills_have_metadata() -> None:
@@ -96,3 +96,54 @@ def test_usage_docs_and_chapter_gallery_are_complete() -> None:
     for filename in expected:
         assert f"examples/taizhou-white-paper/assets/chapter-gallery/{filename}" in readme
         assert f"assets/chapter-gallery/{filename}" in example_readme
+
+
+def test_chinese_and_english_documentation_are_paired() -> None:
+    pairs = [
+        (ROOT / "README.md", ROOT / "README.en.md"),
+        (ROOT / "CHANGELOG.md", ROOT / "CHANGELOG.en.md"),
+        (ROOT / "docs" / "getting-started.md", ROOT / "docs" / "getting-started.en.md"),
+        (ROOT / "docs" / "usage-cookbook.md", ROOT / "docs" / "usage-cookbook.en.md"),
+        (
+            ROOT / "examples" / "taizhou-white-paper" / "README.md",
+            ROOT / "examples" / "taizhou-white-paper" / "README.en.md",
+        ),
+    ]
+    for chinese, english in pairs:
+        assert chinese.is_file()
+        assert english.is_file()
+        chinese_text = chinese.read_text(encoding="utf-8")
+        english_text = english.read_text(encoding="utf-8")
+        assert "[English]" in chinese_text
+        assert "[简体中文]" in english_text
+
+    english_readme = (ROOT / "README.en.md").read_text(encoding="utf-8")
+    english_example = (
+        ROOT / "examples" / "taizhou-white-paper" / "README.en.md"
+    ).read_text(encoding="utf-8")
+    assert "Current version: `0.1.2`" in english_readme
+    assert "docs/getting-started.en.md" in english_readme
+    assert "docs/usage-cookbook.en.md" in english_readme
+    gallery_files = {
+        "00-cover-page-01.png",
+        "01-contents-page-03.png",
+        "02-governance-page-04.png",
+        "03-multi-brand-page-07.png",
+        "04-product-material-page-12.png",
+        "05-media-operation-page-17.png",
+    }
+    for filename in gallery_files:
+        assert f"examples/taizhou-white-paper/assets/chapter-gallery/{filename}" in english_readme
+        assert f"assets/chapter-gallery/{filename}" in english_example
+
+    bilingual_reference = (
+        PLUGIN
+        / "skills"
+        / "aos-publish-document"
+        / "references"
+        / "bilingual-delivery.md"
+    )
+    assert bilingual_reference.is_file()
+    assert "references/bilingual-delivery.md" in (
+        PLUGIN / "skills" / "aos-publish-document" / "SKILL.md"
+    ).read_text(encoding="utf-8")

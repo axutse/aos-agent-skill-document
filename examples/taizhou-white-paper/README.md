@@ -1,5 +1,7 @@
 # TAIZHOU 品牌企业白皮书案例
 
+[简体中文](README.md) | [English](README.en.md)
+
 这是 `aos-agent-skill-document` 的公开、可重复生成案例。它演示如何把结构化 Brief、企业资料、品牌资料和 Style Pack 转换为可编辑 DOCX、固定版式 PDF，以及可供逐页检查的渲染结果。
 
 案例采用 TAIZHOU 企业系统，以及 WANMIAN / 万棉尚品、GEERNA / 哥尔纳、UIUP 三品牌架构。所有经营数字、价格带、组织职责和增长目标均为 `PLANNING ASSUMPTION / 企划模拟值`，不能当作已验证企业事实。

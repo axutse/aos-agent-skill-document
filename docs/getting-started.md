@@ -1,5 +1,7 @@
 # 从安装到首次交付
 
+[简体中文](getting-started.md) | [English](getting-started.en.md)
+
 这份教程面向第一次使用 `AOS Agent Skill · Document` 的用户。完成后，你会知道它解决什么问题、如何安装、如何选择 Skill、怎样发出一条可执行指令，以及如何验收输出。
 
 ## 1. 先理解它的定位
@@ -199,7 +201,18 @@ my-white-paper/
 
 联系表适合快速浏览整体节奏，但不能替代逐页验收。
 
-## 10. 更新与卸载
+## 10. 中英文双语交付
+
+制作中英文版本时，先说明需要两个独立文件、章节中英对照，还是同页左右对照。长文档默认推荐两个独立版本，因为中英文的换行和分页规律不同。
+
+```text
+使用 $aos-publish-document，基于同一套已验证资料分别制作简体中文版和英文版。
+保持章节顺序、数字、表格、图注、页面标识和模拟值标签一致。翻译前先建立术语表；
+没有正式英文名时，不要自行翻译注册名称。分别输出两种语言的 DOCX 和 PDF，
+四个文件都需要独立渲染和逐页检查，并报告页数、换行和分页差异。
+```
+
+## 11. 更新与卸载
 
 更新远程市场信息后重新安装插件：
 
@@ -213,7 +226,7 @@ codex plugin add aos-agent-skill-document@aos-agent-skills
 codex plugin remove aos-agent-skill-document
 ```
 
-## 11. 常见问题
+## 12. 常见问题
 
 ### 安装后看不到 Skill
 
@@ -241,7 +254,7 @@ pdftoppm -v
 
 不需要。这个插件只提供工作流、参考资料和本地处理脚本，不包含外部模型路由或在线转换服务。
 
-## 12. 下一步
+## 13. 下一步
 
 - 复制更多完整提示词：[使用案例与提示词手册](usage-cookbook.md)
 - 查看公开成品：[TAIZHOU 白皮书案例](../examples/taizhou-white-paper/README.md)
