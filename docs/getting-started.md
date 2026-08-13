@@ -56,16 +56,16 @@ brew install poppler
 
 ```bash
 codex plugin marketplace add axutse/aos-agent-skill-document
-codex plugin add aos-agent-skill-document@aos-agent-skills
 ```
 
-然后查看插件列表：
+然后完成安装：
 
-```bash
-codex plugin list
-```
+1. 在 Codex CLI 中输入 `/plugins`，打开插件浏览器；
+2. 从 `AOS Agent Skills` 来源选择并安装 **AOS Agent Skill · Document**；
+3. 如果使用 ChatGPT 桌面端，也可以打开 Plugins Directory，从同一来源安装；
+4. 安装完成后**新建一个 Codex 任务**，让新的 Skill 元数据进入任务上下文。
 
-列表中应出现 `aos-agent-skill-document`。安装或更新后，请在 Codex 中**新建一个任务**，让新的 Skill 元数据进入任务上下文。
+以上流程依据 [OpenAI 插件使用说明](https://learn.chatgpt.com/docs/plugins) 和 [插件打包与 Marketplace 指南](https://developers.openai.com/plugins/build/plugins)。
 
 ## 4. 选择正确的 Skill
 
@@ -214,23 +214,19 @@ my-white-paper/
 
 ## 11. 更新与卸载
 
-更新远程市场信息后重新安装插件：
+先刷新已配置的 Marketplace：
 
 ```bash
-codex plugin add aos-agent-skill-document@aos-agent-skills
+codex plugin marketplace upgrade aos-agent-skills
 ```
 
-更新完成后新建 Codex 任务再测试。卸载时执行：
-
-```bash
-codex plugin remove aos-agent-skill-document
-```
+然后在 Codex CLI 的 `/plugins` 或桌面端 Plugins Directory 中更新、停用或卸载插件。更新完成后新建 Codex 任务再测试。
 
 ## 12. 常见问题
 
 ### 安装后看不到 Skill
 
-先运行 `codex plugin list` 确认安装状态，然后新建 Codex 任务。旧任务可能仍使用安装前的 Skill 元数据。
+打开 Codex CLI 的 `/plugins` 或桌面端 Plugins Directory 确认插件已安装并启用，然后新建 Codex 任务。旧任务可能仍使用安装前的 Skill 元数据。
 
 ### DOCX 可以生成，但没有页面图片或视觉验收
 

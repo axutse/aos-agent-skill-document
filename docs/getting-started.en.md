@@ -56,16 +56,16 @@ Run:
 
 ```bash
 codex plugin marketplace add axutse/aos-agent-skill-document
-codex plugin add aos-agent-skill-document@aos-agent-skills
 ```
 
-Then inspect the installed plugins:
+Then complete the installation:
 
-```bash
-codex plugin list
-```
+1. Enter `/plugins` in Codex CLI to open the plugin browser.
+2. Select and install **AOS Agent Skill · Document** from the `AOS Agent Skills` source.
+3. In the ChatGPT desktop app, you can instead open the Plugins Directory and install it from the same source.
+4. After installation, **start a new Codex task** so the current skill metadata is loaded into the task context.
 
-The list should contain `aos-agent-skill-document`. After installation or update, **start a new Codex task** so that the current skill metadata is loaded into the task context.
+This flow follows the official [OpenAI plugin usage guide](https://learn.chatgpt.com/docs/plugins) and [plugin packaging and marketplace guide](https://developers.openai.com/plugins/build/plugins).
 
 ## 4. Select the right skill
 
@@ -218,23 +218,19 @@ report any page-count or pagination differences.
 
 ## 11. Update and uninstall
 
-Reinstall after refreshing the remote marketplace information:
+Refresh the configured marketplace first:
 
 ```bash
-codex plugin add aos-agent-skill-document@aos-agent-skills
+codex plugin marketplace upgrade aos-agent-skills
 ```
 
-Start a new Codex task after the update. To uninstall:
-
-```bash
-codex plugin remove aos-agent-skill-document
-```
+Then update, disable, or uninstall the plugin from `/plugins` in Codex CLI or from the Plugins Directory in the desktop app. Start a new Codex task after the update.
 
 ## 12. Troubleshooting
 
 ### The skills do not appear after installation
 
-Run `codex plugin list`, then start a new Codex task. An existing task may still have pre-installation metadata.
+Open `/plugins` in Codex CLI or the Plugins Directory in the desktop app and confirm that the plugin is installed and enabled, then start a new Codex task. An existing task may still have pre-installation metadata.
 
 ### DOCX is generated but no page images or visual QA appear
 

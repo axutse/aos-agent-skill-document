@@ -107,10 +107,11 @@ When both Word and PDF are required, prefer `$aos-publish-document`. It verifies
 
 ```bash
 codex plugin marketplace add axutse/aos-agent-skill-document
-codex plugin add aos-agent-skill-document@aos-agent-skills
 ```
 
-Start a new Codex task after installation so the new skill metadata is available in context.
+Then enter `/plugins` in Codex CLI and install **AOS Agent Skill · Document** from the `AOS Agent Skills` source. In the ChatGPT desktop app, open the Plugins Directory and install it from the same source. Start a new Codex task after installation so the new skill metadata is available in context.
+
+This flow follows the official [OpenAI plugin usage guide](https://learn.chatgpt.com/docs/plugins) and [plugin packaging and marketplace guide](https://developers.openai.com/plugins/build/plugins).
 
 ### 2 · Prepare the input
 

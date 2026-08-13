@@ -6,7 +6,7 @@ Security fixes are applied to the latest published release.
 
 ## Report a problem
 
-Do not open a public issue containing credentials, private documents, personal information, or an unredacted exploit sample. Contact the repository owner privately through the security-reporting method configured on GitHub.
+Do not open a public issue containing credentials, private documents, personal information, or an unredacted exploit sample. Use GitHub's [private vulnerability reporting form](https://github.com/axutse/aos-agent-skill-document/security/advisories/new) to contact the repository owner without exposing the report publicly.
 
 ## Repository guarantees
 

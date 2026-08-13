@@ -108,10 +108,11 @@ TAIZHOU 开源案例包含 20 页可编辑 DOCX、对应 PDF、完整联系表�
 
 ```bash
 codex plugin marketplace add axutse/aos-agent-skill-document
-codex plugin add aos-agent-skill-document@aos-agent-skills
 ```
 
-安装后新建一个 Codex 任务，使新的 Skill 元数据进入上下文。
+然后在 Codex CLI 中输入 `/plugins`，从 `AOS Agent Skills` 来源安装 **AOS Agent Skill · Document**；在 ChatGPT 桌面端也可以打开 Plugins Directory，从同一来源安装。安装完成后新建一个 Codex 任务，使新的 Skill 元数据进入上下文。
+
+安装流程依据 [OpenAI 插件使用说明](https://learn.chatgpt.com/docs/plugins) 和 [插件打包与 Marketplace 指南](https://developers.openai.com/plugins/build/plugins)。
 
 ### 2 · 准备输入
 
