@@ -52,7 +52,7 @@ skillhub publish dist/skillhub/aos-agent-skill-document \
 预期输出：
 
 ```text
-✓ Dry-run passed: aos-agent-skill-document@0.1.3
+✓ Dry-run passed: aos-agent-skill-document@0.1.4
 ```
 
 ## 登录和正式发布

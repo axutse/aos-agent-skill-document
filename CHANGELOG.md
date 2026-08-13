@@ -4,6 +4,22 @@
 
 [简体中文](CHANGELOG.md) | [English](CHANGELOG.en.md)
 
+## [0.1.4] - 2026-08-13
+
+GitHub Apple 风格展示版本。
+
+### Added
+
+- 中英文主视觉，在 GitHub 深浅主题中保持稳定对比，并提供可访问标题与说明。
+- GitHub 首页 Bento 能力概览、快速导航和渐进展开的使用案例。
+- README 主视觉存在性、系统字体栈和版本一致性测试。
+
+### Changed
+
+- 中英文 README 重新按“定位 → 成果 → 能力 → 选择 → 上手 → 案例”阅读路径编排。
+- 案例图库继续严格保留六张大图，同时提高标题、图注和动作链接的可读性。
+- Codex Plugin、Python 项目、SkillHub 发行包和 GitHub Release 统一使用 `0.1.4`。
+
 ## [0.1.3] - 2026-08-13
 
 功能范围与多渠道发行版本。
@@ -70,3 +86,4 @@
 [0.1.1]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.1
 [0.1.2]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.2
 [0.1.3]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.3
+[0.1.4]: https://github.com/axutse/aos-agent-skill-document/releases/tag/v0.1.4
